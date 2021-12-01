@@ -3,13 +3,13 @@
     <title><![CDATA[Daily Experiences]]></title>
     <link href="/blog/tags/bash.xml" rel="self"/>
     <link href="/"/>
-    <updated>2021-12-01T10:33:53+00:00</updated>
+    <updated>2021-12-01T11:00:15+00:00</updated>
     <id>/</id>
         <generator uri="http://sculpin.io/">Sculpin</generator>
             <entry>
             <title type="html"><![CDATA[Linux terminal shortcuts]]></title>
             <link href="/blog/1970/01/01/_posts/2021-12-1-create-bash-shortcuts.md/"/>
-            <updated>2021-12-01T10:33:53+00:00</updated>
+            <updated>2021-12-01T11:00:15+00:00</updated>
             <id>/blog/1970/01/01/_posts/2021-12-1-create-bash-shortcuts.md/</id>
             <content type="html"><![CDATA[<h1 id="create-terminal-shortcut-command">Create terminal shortcut command</h1>
 
@@ -21,6 +21,36 @@
 </code></pre>
 
 <p>now if type "serve" on command line , php artisan command will be run.</p>
+]]></content>
+        </entry>
+            <entry>
+            <title type="html"><![CDATA[List files and folders with capacity]]></title>
+            <link href="/blog/1970/01/01/_posts/2021-12-1-list-of-files-folders-with-capacity.md/"/>
+            <updated>2021-12-01T11:00:15+00:00</updated>
+            <id>/blog/1970/01/01/_posts/2021-12-1-list-of-files-folders-with-capacity.md/</id>
+            <content type="html"><![CDATA[<h1 id="how-can-list-all-files-and-folders-with-capacity">How can list all files and folders with capacity</h1>
+
+<p>If we need know How much space do the files take up we can use this command:</p>
+
+<p>For example:</p>
+
+<pre><code class="bash">du -sh *
+</code></pre>
+
+<p>we can see this result:</p>
+
+<pre><code>8.0K    404.html
+8.0K    about
+870K    assets
+4.0K    atom.xml
+108K    blog
+5.4M    build
+8.0K    favicon.ico
+8.0K    index.html
+512 robots.txt
+512 sitemap.xml
+
+</code></pre>
 ]]></content>
         </entry>
     </feed>
