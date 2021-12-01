@@ -107,6 +107,62 @@
             Tags:
                         <a href="/blog/tags/bash">bash</a>,                         <a href="/blog/tags/ubuntu">ubuntu</a>,                         <a href="/blog/tags/ls">ls</a>,                         <a href="/blog/tags/terminal">terminal</a>,                         <a href="/blog/tags/command">command</a>,                         <a href="/blog/tags/list">list</a>                        </p>
             </article>
+    <article>
+        <header>
+            <h2><a href="/blog/1970/01/01/_posts/2021-12-1-run-ssh-on-ubuntu.md/">Run SSH on ubuntu</a></h2>
+        </header>
+        <div>
+            <h1 id="how-to--run-ssh-server-on-ubuntu-%3F">How to  run ssh server on ubuntu ?</h1>
+
+<p>Sometimes we need access to our ubuntu server remotely via ssh protocol.For do this we must run this commands:</p>
+
+<pre><code class="bash">apt-get update &amp;&amp; apt-get upgrade
+apt-get install openssh-server
+service ssh start 
+</code></pre>
+
+<p>Then our serve must have strong password. so we create or change ubntu password with this command:</p>
+
+<pre><code class="bash">passwd 
+</code></pre>
+
+<p>for change another user's password we must type username after "passwd":</p>
+
+<pre><code class="bash">passwd username
+</code></pre>
+
+<p>If we need to connect ssh only with password we must edit this file:</p>
+
+<pre><code class="bash">#How to Enable SSH Password Authentication
+nano /etc/ssh/sshd_config
+
+</code></pre>
+
+<p>and edit this variables on this file:</p>
+
+<pre><code>PasswordAuthentication yes
+PermitRootLogin yes
+ChallengeResponseAuthentication yes
+</code></pre>
+
+<p>now we can connect to our server by this command:</p>
+
+<pre><code class="bash">ssh root@192.168.1.1 
+#192.168.1.1 is an example 
+</code></pre>
+
+<p>if ssh run in another port we must type port number after above command:</p>
+
+<pre><code class="bash">ssh root@192.168.1.1 -p 220
+</code></pre>
+
+<p>for more security we can create a security key and login with this key. you can see <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-centos7">this link</a> for settings ssh key.</p>
+
+        </div>
+                    <p class="tags">
+            Tags:
+                        <a href="/blog/tags/bash">bash</a>,                         <a href="/blog/tags/ubuntu">ubuntu</a>,                         <a href="/blog/tags/terminal">terminal</a>,                         <a href="/blog/tags/command">command</a>,                         <a href="/blog/tags/ssh">ssh</a>                        </p>
+            </article>
                 </div>
                 <div class="col-sm-4 sidebar">
                     <div class="card bg-light">
